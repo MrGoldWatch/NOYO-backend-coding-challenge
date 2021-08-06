@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "8f53edef-98cf-45ee-b1e1-5b997bf2918f",
+		"name": "backend-coding-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Address for person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/persons/{{id}}/address",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"persons",
+						"{{id}}",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Address for person",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "street_one",
+						"value": "123 Main Street",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\": \"2022-06-19\",\n    \"street_one\": \"2 California Street\",\n    \"city\": \"San Francisco\",\n    \"state\": \"CA\",\n    \"zip_code\": \"69420\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/persons/{{id}}/address",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"persons",
+						"{{id}}",
+						"address"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2021-01-01",
+							"disabled": true
+						},
+						{
+							"key": "street_one",
+							"value": "123 Main Street",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "San Francisco",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "CA",
+							"disabled": true
+						},
+						{
+							"key": "zip_code",
+							"value": "94613",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
